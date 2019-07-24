@@ -8,6 +8,7 @@ import java.util.Scanner;
 /* 
 Что внутри папки?
 */
+
 public class Solution extends SimpleFileVisitor<Path> {
     private static int foldersCount = 0;
     private static int filesCount = 0;
@@ -18,8 +19,6 @@ public class Solution extends SimpleFileVisitor<Path> {
         Path path = Paths.get(read.nextLine());
         read.close();
 
-
-
         if (!Files.isDirectory(path)) {
             System.out.println(path.toAbsolutePath()+" - не папка");
             return;
@@ -29,10 +28,6 @@ public class Solution extends SimpleFileVisitor<Path> {
         System.out.println("Всего папок - "+(foldersCount - 1));
         System.out.println("Всего файлов - "+filesCount);
         System.out.print("Общий размер - "+sizeBytes);
-
-
-
-
     }
 
     public static void folderInfo(Path path) throws IOException {
